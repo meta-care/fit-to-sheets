@@ -11,7 +11,6 @@ This document is an updated and personnalized version from [this blog post](http
 
 Here is a [bonus link](https://www.youtube.com/watch?v=K6Vcfm7TA5U) to help us retrieve data from a google spreadsheets database.
 
-
 Here is [my own SpreadSheet](https://docs.google.com/spreadsheets/d/12CTPTdHFmDSurdKtTZ0iR_dFSFZgWwyHsUUgnZ6olfE).
 
 .
@@ -46,7 +45,7 @@ If you don't have a smart watch, you will need to add heart rate data manually t
 
 - Click on [OAuth consent screen](https://console.cloud.google.com/apis/credentials/consent) and create one. The only field you need to enter is the name and the email address. You can skip everything else.
 
-- From the [Credentials page](https://console.cloud.google.com/apis/credentials), click 'Create Credentials', and 'OAuth client ID'. Find and select the Fitness API. Then choose Web Application as the application type. The redirect URL is https://script.google.com/macros/d/{SCRIPTID}/usercallback Replace {SCRIPTID} with the actual Script ID you made a note of above. After adding this, make a note of the Client ID and Client Secret.
+- From the [Credentials page](https://console.cloud.google.com/apis/credentials), click 'Create Credentials', and 'OAuth client ID'. Find and select the Fitness API. Then choose Web Application as the application type. The redirect URL is https://script.google.com/macros/d/SCRIPTID/usercallback Replace 'SCRIPTID' with the actual Script ID you made a note of above. After adding this, make a note of the Client ID and Client Secret.
 
 - Go back to the apps script project and paste the code from [Code.gs](https://github.com/meta-care/fit-to-sheets/blob/main/Code.gs) into the code window.
 
@@ -60,8 +59,18 @@ If you don't have a smart watch, you will need to add heart rate data manually t
 
 .
 
-## You're all set! Every day the spreadsheet will automatically update with your heart rate data from the day before.
+### You're all set! Every day the spreadsheet will automatically update with your heart rate data from the day before.
 
 If the heart rate data is blank, this is only because google fit didn't save data at this precise moment. But it will be visible at the moments where you added some data.
 
 If you got errors, try clicking on the 'Reset' button, and then on the 'Authorize' button. You can also go on your [Google connected apps](https://myaccount.google.com/permissions) and remove the permissions of the connected script.
+
+.
+
+# Things we need to improve on this system :
+
+- Add functions in the sheet to get daily data (average, maximum, minimum...) To send less data through Chainlink
+
+- Connect it to Chainlink external adapter
+
+- Only add a line on the sheet when there is data ? To not have 1400 empty lines when we are just testing with few values manually entered in google fit
