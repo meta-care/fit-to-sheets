@@ -48,7 +48,7 @@ If you don't have a smart watch, you will need to add heart rate data manually t
 
 - From the [Credentials page](https://console.cloud.google.com/apis/credentials), click 'Create Credentials', and 'OAuth client ID'. Find and select the Fitness API. Then choose Web Application as the application type. The redirect URL is https://script.google.com/macros/d/{SCRIPTID}/usercallback Replace {SCRIPTID} with the actual Script ID you made a note of above. After adding this, make a note of the Client ID and Client Secret.
 
-- Go back to the apps script project and paste the code from [Code.gs](https://github.com/N0E-P/MetaCare_Test/blob/master/GET-FIT-API/Code.gs) into the code window.
+- Go back to the apps script project and paste the code from [Code.gs](https://github.com/meta-care/fit-to-sheets/blob/main/Code.gs) into the code window.
 
 - At the top of the code there are spaces to enter the Client ID and Client Secret from the API Console. Enter these and save the project.
 
