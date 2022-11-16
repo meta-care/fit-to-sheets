@@ -33,7 +33,7 @@ function getMetricsForDays(fromDaysAgo, toDaysAgo, tabName) {
   var request = {
     "aggregateBy": [
       {
-        "dataTypeName": "com.google.heart_rate.bpm",
+        "dataTypeName": "com.google.heart_rate.summary",
         "dataSourceId" :"derived:com.google.heart_rate.bpm:com.google.android.gms:merge_heart_rate_bpm"
       },
     ],
@@ -94,7 +94,8 @@ function getFitService() {
 
       // Set the scopes to request (space-separated for Google services).
       // see https://developers.google.com/fit/rest/v1/authorization for a list of Google Fit scopes
-      .setScope('https://www.googleapis.com/auth/fitness.heart_rate.read')
+      .setScope("https://www.googleapis.com/auth/fitness.activity.read https://www.googleapis.com/auth/fitness.activity.write https://www.googleapis.com/auth/fitness.blood_glucose.read https://www.googleapis.com/auth/fitness.blood_glucose.write https://www.googleapis.com/auth/fitness.blood_pressure.read https://www.googleapis.com/auth/fitness.blood_pressure.write https://www.googleapis.com/auth/fitness.body.read https://www.googleapis.com/auth/fitness.body.write https://www.googleapis.com/auth/fitness.body_temperature.read https://www.googleapis.com/auth/fitness.body_temperature.write https://www.googleapis.com/auth/fitness.heart_rate.read https://www.googleapis.com/auth/fitness.heart_rate.write https://www.googleapis.com/auth/fitness.location.read https://www.googleapis.com/auth/fitness.location.write https://www.googleapis.com/auth/fitness.nutrition.read https://www.googleapis.com/auth/fitness.nutrition.write https://www.googleapis.com/auth/fitness.oxygen_saturation.read https://www.googleapis.com/auth/fitness.oxygen_saturation.write https://www.googleapis.com/auth/fitness.reproductive_health.read https://www.googleapis.com/auth/fitness.reproductive_health.write https://www.googleapis.com/auth/fitness.sleep.read https://www.googleapis.com/auth/fitness.sleep.write"
+)
 
       // Below are Google-specific OAuth2 parameters.
 
