@@ -5,7 +5,7 @@ This document explains how to automatically store your heart rate data from goog
 
 This process has to be done for each user separately, this is only for test purposes and for the MVP. To get a real user friendly version, we would have to make a real app or website that call the google OAuth and that retrieve data directly. We could even automatically store the data on the user google drive, and retrieve it when needed. The user would only have to connect himself one time to the app for the process to work continously.
 
-For now, the process work only with heart rate data, but we can add  [any other data](https://developers.google.com/fit/rest/v1/reference/users/dataSources/list?apix_params=%7B%22userId%22%3A%22me%22%7D#auth) we want to the list. 
+For now, the process work only with heart rate data, but we can add  [any other data](https://developers.google.com/fit/datatypes) we want to the list. 
 
 This document is an updated and personnalized version from [this blog post](https://ithoughthecamewithyou.com/post/export-google-fit-daily-steps-to-a-google-sheet). Its comment section is very interessant to get more informations and solutions to specific problems.
 

@@ -33,11 +33,11 @@ function getMetricsForDays(fromDaysAgo, toDaysAgo, tabName) {
   var request = {
     "aggregateBy": [
       {
-        "dataTypeName": "com.google.heart_rate.bpm",
-        "dataSourceId" :"derived:com.google.heart_rate.bpm:com.google.android.gms:merge_heart_rate_bpm"
+        "dataTypeName": "com.google.heart_rate.summary",
+        "dataSourceId": "derived:com.google.heart_rate.summary:com.google.android.gms:heart_rate_average"
       },
     ],
-    "bucketByTime": { "durationMillis": 86400000  }, // will look at the data for each minutes : 60000
+    "bucketByTime": { "durationMillis": 60000 }, // will look at the data for each minutes
     "startTimeMillis": start.getTime(),
     "endTimeMillis": end.getTime()
   };
@@ -94,7 +94,7 @@ function getFitService() {
 
       // Set the scopes to request (space-separated for Google services).
       // see https://developers.google.com/fit/rest/v1/authorization for a list of Google Fit scopes
-      .setScope('https://www.googleapis.com/auth/fitness.heart_rate.read')
+      .setScope('https://www.googleapis.com/auth/fitness.body.read')
 
       // Below are Google-specific OAuth2 parameters.
 
